@@ -5,9 +5,11 @@
 /* ================================================================== */
 
 #hero {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+    @include mixins.section();
     background: center no-repeat url("../../images/hero.png");
     background-size: auto 100%;
+}
+
+#portfolio {
+    @include mixins.section();
 }

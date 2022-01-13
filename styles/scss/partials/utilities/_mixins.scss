@@ -2,12 +2,18 @@
 
 // layout mixins
 
-@mixin section-container() {
+@mixin section() {
+    position: relative;
+    height: 100vh;
     width: 100vw;
+}
+
+@mixin section-container() {
+    width: 100%;
         height: 100vh;
 
         @include mq-medium() {
-            width: calc(100vw - #{$nav-width-medium});
+            width: calc(100% - #{$nav-width-medium});
             margin-left: auto;
         }
 }

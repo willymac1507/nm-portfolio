@@ -1,10 +1,33 @@
+@use '../utilities/variables'as *;
+
 /* ================================================================== */
 /* === Typography                                                 === */
 /* ================================================================== */
 
+.navbar {
+    &__logo {
+        font-size: 5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-logo;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    &__link {
+        color: $color-nav;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+.link--emphasis {
+    font-weight: 700;
+}
+
 .hero {
+
     &__headline,
-    &__subtitle, 
+    &__subtitle,
     &__foot {
         color: #fff;
         text-align: center;
@@ -31,5 +54,4 @@
             padding: 5px 0 10px;
         }
     }
-    
 }

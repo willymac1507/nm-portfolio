@@ -13,18 +13,51 @@
     height: 100vh;
     background-color: #fff;
     z-index: 10;
+    border-right: 2px solid $color-logo;
 
     @include mixins.mq-medium() {
         display: block;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 132px;
+        border-bottom: 2px solid $color-logo;
+    }
+
+    &__items {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 0 0 0;
+        list-style: none;
     }
 }
 
 .hero {
 
     &__container {
-        @include mixins.section-container();
+        @include mixins.section-container(); 
     }
     
+    &__content {
+        @include mixins.content-container();
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.portfolio {
+
+    &__container {
+        @include mixins.section-container();
+    }
+
     &__content {
         @include mixins.content-container();
         display: flex;

@@ -1,0 +1,19 @@
+@use '../utilities/variables' as *;
+
+/* ================================================================== */
+/* === navbar                                                     === */
+/* ================================================================== */
+
+.navbar {
+    &__item {
+        width: 100%;
+        padding: 10px 0;
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+.item--emphasis {
+    border-top: 2px solid $color-logo;
+    border-bottom: 2px solid $color-logo;
+}
