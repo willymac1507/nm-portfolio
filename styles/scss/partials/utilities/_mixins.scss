@@ -1,7 +1,43 @@
+@use '../utilities/variables' as *;
+
 // layout mixins
 
 @mixin section-container() {
+    width: 100vw;
+        height: 100vh;
+
+        @include mq-medium() {
+            width: calc(100vw - #{$nav-width-medium});
+            margin-left: auto;
+        }
+}
+
+@mixin content-container() {
+    position: relative;
     padding: 50px 15px;
     width: 100%;
     height: 100%;
+
+    @include mq-small() {
+        max-width: $mvp-small;
+        margin: 0 auto;
+    }
+
+    @include mq-medium() {
+        max-width: $mvp-medium;
+    }
+}
+
+// media query mixins
+
+@mixin mq-small() {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin mq-medium() {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
 }
