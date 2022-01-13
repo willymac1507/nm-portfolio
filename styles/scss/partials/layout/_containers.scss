@@ -1,0 +1,14 @@
+/* ================================================================== */
+/* === Containers                                                 === */
+/* ================================================================== */
+@use '../utilities/mixins';
+
+
+.hero {
+    &__content {
+        @include mixins.section-container();
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -2,6 +2,10 @@
 /* === Base styles                                                === */
 /* ================================================================== */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     font: 400 16px 'Poppins', sans-serif;
 }

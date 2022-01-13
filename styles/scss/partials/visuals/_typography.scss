@@ -1,0 +1,35 @@
+/* ================================================================== */
+/* === Typography                                                 === */
+/* ================================================================== */
+
+.hero {
+    &__headline,
+    &__subtitle, 
+    &__foot {
+        color: #fff;
+        text-align: center;
+    }
+
+    &__headline {
+        font-weight: 600;
+    }
+
+    &__subtitle,
+    &__foot {
+        font-weight: 200;
+    }
+
+    &__foot {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        font-size: .8125rem;
+        text-align: center;
+
+        .icon {
+            padding: 5px 0 10px;
+        }
+    }
+    
+}
