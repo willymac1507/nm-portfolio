@@ -2,7 +2,7 @@
 /* === Containers                                                 === */
 /* ================================================================== */
 @use '../utilities/mixins';
-@use '../utilities/variables' as *;
+@use '../utilities/variables'as *;
 
 .navbar {
     display: none;
@@ -41,9 +41,10 @@
 .hero {
 
     &__container {
-        @include mixins.section-container(); 
+        @include mixins.section-container();
+        height: 100vh;
     }
-    
+
     &__content {
         @include mixins.content-container();
         display: flex;
@@ -61,7 +62,50 @@
     &__content {
         @include mixins.content-container();
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    &__card {
+        position: relative;
+        flex: 1 1 100%;
+        color: #000;
+
+        @include mixins.mq-small() {
+            flex: 1 1 45%;
+        }
+
+        @include mixins.mq-large() {
+            flex: 1 1 30%;
+        }
+
+        &:hover {
+            color: rgba(0, 0, 0, 0.3);
+            transition: color .25s;
+        }
+    }
+}
+
+.card {
+    &__text {
+        margin: 15px 0 30px;
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    &__title {
+        flex: 1 1 40%;
+
+        @include mixins.mq-medium() {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__cta {
+        padding-bottom: 4.5px;
     }
 }

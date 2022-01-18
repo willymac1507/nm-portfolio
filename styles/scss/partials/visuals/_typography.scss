@@ -10,12 +10,11 @@
         font-weight: 700;
         text-transform: uppercase;
         color: $color-logo;
-        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, .6);
     }
 
     &__link {
         color: $color-nav;
-        text-decoration: none;
         font-weight: 600;
     }
 }
@@ -53,5 +52,19 @@
         .icon {
             padding: 5px 0 10px;
         }
+    }
+}
+
+.card {
+
+    &__title {
+        color: inherit;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__cta {
+        color: inherit;
+        font-size: .75rem;
     }
 }
