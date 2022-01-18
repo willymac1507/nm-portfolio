@@ -471,6 +471,7 @@ a {
 .portfolio__image {
   width: 100%;
   border-radius: 5px;
+  display: block;
 }
 
 /* ================================================================== */
@@ -703,7 +704,6 @@ a {
   }
 }
 .portfolio__card {
-  position: relative;
   flex: 1 1 100%;
   color: #000;
 }
@@ -720,6 +720,31 @@ a {
 .portfolio__card:hover {
   color: rgba(0, 0, 0, 0.3);
   transition: color 0.25s;
+}
+.portfolio__card:hover .portfolio__image-overlay::after {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.25s;
+}
+.portfolio__image-container {
+  position: relative;
+}
+.portfolio__image-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.portfolio__image-overlay::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: transparent;
 }
 
 .card__text {
