@@ -36,6 +36,19 @@
         padding: 100px 0 0 0;
         list-style: none;
     }
+
+    &__icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 45px;
+        color: inherit;
+
+        &:visited {
+            color: inherit;
+        }
+    }
 }
 
 .hero {
@@ -66,6 +79,10 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 15px;
+
+        @include mixins.mq-medium {
+            gap: 30px;
+        }
     }
 
     &__card {

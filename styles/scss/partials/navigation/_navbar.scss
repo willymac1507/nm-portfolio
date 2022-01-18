@@ -17,3 +17,10 @@
     border-top: 2px solid $color-logo;
     border-bottom: 2px solid $color-logo;
 }
+
+.item--social {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 5px;
+    color: $color-logo;
+}

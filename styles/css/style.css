@@ -618,6 +618,17 @@ a {
   padding: 100px 0 0 0;
   list-style: none;
 }
+.navbar__icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 45px;
+  color: inherit;
+}
+.navbar__icon-container:visited {
+  color: inherit;
+}
 
 .hero__container {
   width: 100%;
@@ -701,6 +712,11 @@ a {
 @media screen and (min-width: 1200px) {
   .portfolio__content {
     max-width: 1800px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__content {
+    gap: 30px;
   }
 }
 .portfolio__card {
@@ -812,6 +828,13 @@ a {
 .item--emphasis {
   border-top: 2px solid #52b2cb;
   border-bottom: 2px solid #52b2cb;
+}
+
+.item--social {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 5px;
+  color: #52b2cb;
 }
 
 /*# sourceMappingURL=style.css.map */
