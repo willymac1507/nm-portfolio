@@ -17,6 +17,10 @@
     &__link {
         color: $color-nav;
         font-weight: 600;
+
+        &:hover {
+            color: lighten($color-nav, 20%);
+        }
     }
 }
 

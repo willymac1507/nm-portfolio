@@ -490,6 +490,9 @@ a {
   color: #494c5f;
   font-weight: 600;
 }
+.navbar__link:hover {
+  color: #777c97;
+}
 
 .link--emphasis {
   font-weight: 700;
