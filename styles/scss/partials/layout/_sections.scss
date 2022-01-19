@@ -4,12 +4,13 @@
 /* === Sections                                                    === */
 /* ================================================================== */
 
-#hero {
+footer,
+#portfolio,
+#contact {
     @include mixins.section();
-    background: center no-repeat url("../../images/hero.png");
-    background-size: auto 100%;
 }
 
-#portfolio {
-    @include mixins.section();
+#hero {
+    background: center no-repeat url("../../images/hero.png");
+    background-size: auto 100%;
 }

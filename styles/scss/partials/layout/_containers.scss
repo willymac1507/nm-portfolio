@@ -74,6 +74,7 @@
 
     &__content {
         @include mixins.content-container();
+        padding: 15px 15px 0;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -81,16 +82,23 @@
         gap: 15px;
 
         @include mixins.mq-medium {
+            padding: 50px 15px 0;
             gap: 30px;
         }
     }
 
     &__card {
+        display: flex;
+        flex-direction: column-reverse;
         flex: 1 1 100%;
-        color: #000;
+        color: $color-nav;
 
         @include mixins.mq-small() {
             flex: 1 1 45%;
+        }
+
+        @include mixins.mq-medium() {
+            flex-direction: column;
         }
 
         @include mixins.mq-large() {
@@ -104,6 +112,16 @@
             .portfolio__image-overlay::after {
                 background-color: rgba(0, 0, 0, 0.3);
                 transition: all .25s;
+            }
+        }
+
+        hr {
+            width: 30%;
+            color: $color-nav;
+            opacity: 50%;
+
+            @include mixins.mq-small() {
+                display: none;
             }
         }
     }
@@ -147,12 +165,87 @@
     &__title {
         flex: 1 1 40%;
 
-        @include mixins.mq-medium() {
+        @include mixins.mq-small() {
             flex: 1 1 100%;
         }
     }
 
     &__cta {
         padding-bottom: 4.5px;
+    }
+}
+
+.contact {
+    &__container {
+        @include mixins.section-container();
+    }
+
+    &__content {
+        @include mixins.content-container();
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        @include mixins.mq-large() {
+            gap: 30px;
+        }
+    }
+
+    &__info-container {
+        flex: 1 1 100%;
+
+        @include mixins.mq-large() {
+            flex: 1 1 30%;
+        }
+    }
+
+    &__form-container {
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 7px;
+
+        @include mixins.mq-large() {
+            flex: 1 1 60%;
+        }
+
+        @include mixins.mq-xlarge() {
+            gap: 10px;
+        }
+    }
+
+    &__input {
+        flex: 1 1 100%;
+        height: 2rem;
+        background-color: lightgrey;
+        border-radius: 3px;
+
+        @include mixins.mq-medium() {
+            &:nth-child(-n+2) {
+                flex: 1 1 45%;
+            }
+        }
+    }
+
+    &__input:nth-child(5) {
+        height: 10rem;
+    }
+
+
+}
+
+.footer {
+    &__container {
+        @include mixins.section-container();
+    }
+
+    &__content {
+        width: 100%;
+        padding-bottom: 30px;
+        text-align: center;
+        font-size: .8125rem;
+        color: $color-nav;
     }
 }

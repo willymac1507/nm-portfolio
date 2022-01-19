@@ -1,4 +1,5 @@
 @use '../utilities/variables'as *;
+@use '../utilities/mixins';
 
 /* ================================================================== */
 /* === Typography                                                 === */
@@ -34,6 +35,10 @@
 
     &__headline {
         font-weight: 600;
+
+        @include mixins.mq-xlarge() {
+            font-size: 2.5rem;
+        }
     }
 
     &__subtitle,
@@ -67,4 +72,36 @@
         color: inherit;
         font-size: .75rem;
     }
+}
+
+.contact {
+    &__heading {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    &__text {
+        font-size: 0.875rem;
+    }
+
+    &__details {
+        margin: 0;
+        font-weight: 600;
+    }
+
+    &--email {
+        color: $color-nav;
+        transition: 0.25s;
+
+        &:hover {
+            font-size: 1.1rem;
+            transition: 0.25s;
+        }
+    }
+}
+
+.footer {
+    color: inherit;
 }

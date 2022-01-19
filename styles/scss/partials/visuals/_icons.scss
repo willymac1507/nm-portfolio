@@ -9,6 +9,7 @@
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
+    text-decoration: none;
     line-height: 1;
 
     /* Enable Ligatures ================ */
@@ -25,27 +26,39 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    &-arrow-down:before {
+    &--arrow-down:before {
         content: "\ebbb";
     }
 
-    &-arrow-forward:before {
+    &--arrow-up:before {
+        content: "\ebb9";
+    }
+
+    &--arrow-forward:before {
         content: "\ea3c";
     }
 
-    &-facebook:before {
+    &--facebook:before {
         content: "\ec5c";
     }
 
-    &-twitter:before {
+    &--twitter:before {
         content: "\ec62";
     }
 
-    &-linkedin2:before {
+    &--linkedin2:before {
         content: "\ec96";
     }
 
-    &-instagram:before {
+    &--instagram:before {
         content: "\ea92";
+    }
+
+    &--tel:before {
+        content: "\e9e3"
+    }
+
+    &--mail:before {
+        content: "\ec50"
     }
 }

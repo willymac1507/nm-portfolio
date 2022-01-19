@@ -1,4 +1,5 @@
 @use '../utilities/mixins';
+@use 'variables' as *;
 
 /* ================================================================== */
 /* === Buttons                                                    === */
@@ -30,4 +31,21 @@
     @include mixins.mq-medium() {
         display: none;
     }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;    
+    padding: 0 35px;
+    margin-top: 10px;
+    background-color: #fff;
+    color: $color-nav;
+    border: 2px solid $color-nav;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+
 }

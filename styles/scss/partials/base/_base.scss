@@ -1,3 +1,5 @@
+@use '../utilities/variables'as var;
+
 /* ================================================================== */
 /* === Base styles                                                === */
 /* ================================================================== */
@@ -8,6 +10,8 @@
 
 html {
     font: 400 16px 'Poppins', sans-serif;
+    color: var.$color-nav;
+    letter-spacing: 0.4px;
 }
 
 a {

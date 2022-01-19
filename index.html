@@ -41,22 +41,24 @@
                         </a>
                     </li>
                     <li class="navbar__item item--emphasis">
-                        <a href="#" class="navbar__link link--emphasis">
+                        <a href="#contact" class="navbar__link link--emphasis">
                             Contact Me
                         </a>
                     </li>
                     <li class="navbar__item item--social">
                         <a href="https://www.facebook.com/will.mccloy" target="_blank" class="navbar__icon-container">
-                            <div class="icon icon-facebook"></div>
+                            <div class="icon icon--facebook"></div>
                         </a>
-                        <a href="https://www.instagram.com/bipolarbilly70/" target="_blank" class="navbar__icon-container">
-                            <div class="icon icon-instagram"></div>
+                        <a href="https://www.instagram.com/bipolarbilly70/" target="_blank"
+                            class="navbar__icon-container">
+                            <div class="icon icon--instagram"></div>
                         </a>
                         <a href="https://twitter.com/BiPolarBilly13" target="_blank" class="navbar__icon-container">
-                            <div class="icon icon-twitter"></div>
+                            <div class="icon icon--twitter"></div>
                         </a>
-                        <a href="https://www.linkedin.com/in/will-mccloy-5a201196/" target="_blank" class="navbar__icon-container">
-                            <div class="icon icon-linkedin2"></div>
+                        <a href="https://www.linkedin.com/in/will-mccloy-5a201196/" target="_blank"
+                            class="navbar__icon-container">
+                            <div class="icon icon--linkedin2"></div>
                         </a>
                     </li>
                 </ul>
@@ -78,10 +80,10 @@
                 <h4 class="hero__subtitle">
                     I'm a Web Developer
                     </h3>
-                    <div class="hero__foot">
+                    <a href="#portfolio" class="hero__foot">
                         Scroll Down
-                        <div class="icon icon-arrow-down"></div>
-                    </div>
+                        <div class="icon icon--arrow-down"></div>
+                    </a>
             </div>
         </div>
 
@@ -102,7 +104,7 @@
                     </div>
                     <div class="card__text">
                         <div class="card__title">Project 1</div>
-                        <div class="card__cta">View project <span class="icon icon-arrow-forward"></span></div>
+                        <div class="card__cta">View project <span class="icon icon--arrow-forward"></span></div>
                     </div>
                 </a>
                 <a href="#" class="portfolio__card">
@@ -117,8 +119,9 @@
                     </div>
                     <div class="card__text">
                         <div class="card__title">Project 2</div>
-                        <div class="card__cta">View project <span class="icon icon-arrow-forward"></span></div>
+                        <div class="card__cta">View project <span class="icon icon--arrow-forward"></span></div>
                     </div>
+                    <hr>
                 </a>
                 <a href="#" class="portfolio__card">
                     <div class="portfolio__image-container">
@@ -132,8 +135,9 @@
                     </div>
                     <div class="card__text">
                         <div class="card__title">Project 3</div>
-                        <div class="card__cta">View project <span class="icon icon-arrow-forward"></span></div>
+                        <div class="card__cta">View project <span class="icon icon--arrow-forward"></span></div>
                     </div>
+                    <hr>
                 </a>
                 <a href="#" class="portfolio__card">
                     <div class="portfolio__image-container">
@@ -147,8 +151,9 @@
                     </div>
                     <div class="card__text">
                         <div class="card__title">Project 4</div>
-                        <div class="card__cta">View project <span class="icon icon-arrow-forward"></span></div>
+                        <div class="card__cta">View project <span class="icon icon--arrow-forward"></span></div>
                     </div>
+                    <hr>
                 </a>
                 <a href="#" class="portfolio__card">
                     <div class="portfolio__image-container">
@@ -162,8 +167,9 @@
                     </div>
                     <div class="card__text">
                         <div class="card__title">Project 5</div>
-                        <div class="card__cta">View project <span class="icon icon-arrow-forward"></span></div>
+                        <div class="card__cta">View project <span class="icon icon--arrow-forward"></span></div>
                     </div>
+                    <hr>
                 </a>
                 <a href="#" class="portfolio__card">
                     <div class="portfolio__image-container">
@@ -175,14 +181,63 @@
                         </picture>
                         <div class="portfolio__image-overlay"></div>
                     </div>
+
                     <div class="card__text">
                         <div class="card__title">Project 6</div>
-                        <div class="card__cta">View project <span class="icon icon-arrow-forward"></span></div>
+                        <div class="card__cta">View project <span class="icon icon--arrow-forward"></span></div>
                     </div>
+                    <hr>
                 </a>
             </div>
         </div>
     </section>
+
+    <section id="contact">
+        <div class="contact__container">
+            <div class="contact__content">
+                <div class="contact__info-container">
+                    <h2 class="contact__heading">Get In Touch...</h2>
+                    <p class="contact__text">...if you would like to know more about me, have a question or comment
+                        about
+                        my work, or would like to discuss working together. </p>
+                    <p class="contact__details contact--tel"><span class="icon icon--tel"></span> 07808 550651</p>
+                    <a href="mailto:will@camel-case.co.uk" class="contact__details contact--email"><span
+                            class="icon icon--mail"></span> will@camel-case.co.uk</a>
+                    <p class="contact__text">Alternatively, complete and submit the form and I'll get back to you as
+                        soon as I can.</p>
+                </div>
+                <form method="post" class="contact__form-container">
+                    <div class="contact__input">
+                        <input id="fname" name="fname" type="text" class="input--fname" placeholder="First Name*">
+                    </div>
+                    <div class="contact__input">
+                        <input id="lname" name="lname" type="text" class="input--lname" placeholder="Last Name*">
+                    </div>
+                    <div class="contact__input">
+                        <input id="email" name="email" type="email" class="input--email" placeholder="Email Address*">
+                    </div>
+                    <div class="contact__input">
+                        <input id="subject" name="subject" type="text" class="input--subject" placeholder="Subject">
+                    </div>
+                    <div class="contact__input">
+                        <textarea id="message" name="message" class="input--message" placeholder="Message"></textarea>
+                    </div>
+                    <a href="#" class="button">Submit</a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer__container">
+            <div class="footer__content">
+                <a href="#hero" class="footer">
+                    <div class="icon icon--arrow-up"></div>
+                    Back to top
+                </a>
+            </div>
+        </div>
+    </footer>
 
 
 </body>
