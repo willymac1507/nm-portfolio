@@ -109,3 +109,24 @@
 .footer {
     color: inherit;
 }
+
+.scs-main {
+
+    &__card {
+
+        h3 {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        font-size: .875rem;
+        color: inherit;
+
+        &:hover {
+            color: lighten($color-nav, 20%);
+        }
+    }
+
+
+}

@@ -249,3 +249,51 @@
         color: $color-nav;
     }
 }
+
+.scs-main {
+    &__container {
+        @include mixins.section-container();
+        background-color: $color-nav;
+        min-height: 100vh;
+    }
+
+    &__content {
+        @include mixins.content-container();
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        color: #fff;
+
+        @include mixins.mq-xlarge {
+            row-gap: 30px;
+        }
+
+        h1 {
+            flex: 1 0 100%;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        flex: 1 1 100%;
+
+        @include mixins.mq-large() {
+            &:nth-of-type(-n+2) {
+                flex: 1 1 40%;
+            }
+        }
+    }
+}
+
+.coding-main {
+    &__container {
+        @include mixins.section-container();
+    }
+
+    &__content {
+        @include mixins.content-container();
+    }
+}
