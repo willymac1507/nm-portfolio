@@ -696,12 +696,17 @@ footer,
 #portfolio,
 #contact {
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
 
 #hero {
-  background: center no-repeat url("../../images/hero.png");
+  background: center no-repeat url("../../images/hero.jpg");
   background-size: auto 100%;
+}
+@media screen and (min-width: 992px) {
+  #hero {
+    background-size: cover;
+  }
 }
 
 #about {
@@ -1277,6 +1282,14 @@ footer,
 @media screen and (min-width: 576px) {
   .about__block {
     flex: 1 0 45%;
+  }
+}
+.about__sub-block:nth-of-type(2) {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .about__sub-block:nth-of-type(2) {
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {

@@ -362,6 +362,15 @@
     }
 
     &__sub-block {
+
+        &:nth-of-type(2) {
+            display: none;
+
+            @include mixins.mq-xlarge() {
+                display: block;
+            }
+        }
+
         @include mixins.mq-xlarge() {
             flex: 1 1 45%;
         }

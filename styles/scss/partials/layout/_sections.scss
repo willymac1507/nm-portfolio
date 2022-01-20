@@ -11,8 +11,11 @@ footer,
 }
 
 #hero {
-    background: center no-repeat url("../../images/hero.png");
+    background: center no-repeat url("../../images/hero.jpg");
     background-size: auto 100%;
+    @include mixins.mq-large() {
+        background-size: cover;
+    }
 }
 
 #about {
