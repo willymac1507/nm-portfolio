@@ -29,15 +29,19 @@
 
     @include mq-medium() {
         padding: 50px 50px;
-        max-width: $mvp-medium;
+        max-width: calc(#{$mvp-medium} - #{$nav-width-medium});
     }
 
     @include mq-large() {
-        max-width: $mvp-large;
+        max-width: calc(#{$mvp-large} - #{$nav-width-medium});
     }
 
     @include mq-xlarge() {
-        max-width: $mvp-xlarge;
+        max-width: calc(#{$mvp-xlarge} - #{$nav-width-medium});
+    }
+
+    @include mq-xxlarge() {
+        max-width: calc(#{$mvp-xxlarge} - #{$nav-width-medium});
     }
 }
 
@@ -63,6 +67,12 @@
 
 @mixin mq-xlarge() {
     @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin mq-xxlarge() {
+    @media screen and (min-width: 1500px) {
         @content;
     }
 }

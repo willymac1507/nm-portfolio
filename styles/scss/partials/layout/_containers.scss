@@ -253,7 +253,7 @@
 .scs-main {
     &__container {
         @include mixins.section-container();
-        background-color: $color-nav;
+        background-color: rgba(0, 0, 0, 0.6);
         min-height: 100vh;
     }
 
@@ -263,14 +263,26 @@
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 50px;
+        min-height: 100vh;
         color: #fff;
-
-        @include mixins.mq-xlarge {
-            row-gap: 30px;
-        }
 
         h1 {
             flex: 1 0 100%;
+        }
+
+        @include mixins.mq-xlarge() {
+            row-gap: 30px;
+        }
+
+        @include mixins.mq-xxlarge() {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 5px;
+
+            h1 {
+                flex: 0 0 15%;
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -281,8 +293,22 @@
         flex: 1 1 100%;
 
         @include mixins.mq-large() {
-            &:nth-of-type(-n+2) {
                 flex: 1 1 40%;
+            }
+
+        @include mixins.mq-xxlarge() {
+            width: 50%;
+
+            &:nth-of-type(1) {
+                align-self: flex-start;
+            }
+
+            &:nth-of-type(2) {
+                align-self: center;
+            }
+
+            &:nth-of-type(3) {
+                align-self: flex-end;
             }
         }
     }
@@ -295,5 +321,99 @@
 
     &__content {
         @include mixins.content-container();
+    }
+}
+
+.about {
+    &__container {
+        @include mixins.section-container();
+    }
+
+    &__content {
+        @include mixins.content-container();
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        color: darken(#fff, 20%);
+
+        @include mixins.mq-small() {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        order: 1;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+        width: 100%;
+        padding: 15px;
+
+        @include mixins.mq-small() {
+            flex: 1 0 45%;
+        }
+    }
+
+    &__sub-block {
+        @include mixins.mq-xlarge() {
+            flex: 1 1 45%;
+        }
+    }
+
+    &__skills-list {
+        list-style: none;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.block--me {
+    order: 0;
+
+    @include mixins.mq-small() {
+        flex: 0 0 100%;
+    }
+}
+
+.block--skills {
+    @include mixins.mq-small() {
+        flex: 0 0 35%;
+    }
+}
+
+.block--journey {
+    @include mixins.mq-xlarge() {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+.progress {
+    &__container {
+        width: 100%;
+        height: 6px;
+        margin: 3px 0;
+        border: 1px solid $color-nav;
+    }
+
+    &__bar {
+        width: 75%;
+        height: 100%;
+        background-color: green;
+    }
+}
+
+.bar {
+    &--50 {
+        width: 50%;
+        background-color: orange;
     }
 }

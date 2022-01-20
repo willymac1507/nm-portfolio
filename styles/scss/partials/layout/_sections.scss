@@ -14,3 +14,30 @@ footer,
     background: center no-repeat url("../../images/hero.png");
     background-size: auto 100%;
 }
+
+#about {
+    background: center no-repeat url("../../images/code_back3.jpg");
+    background-size: auto 100%;
+    min-height: 100vh;
+
+    @include mixins.mq-xlarge() {
+        background-size: 100% auto;
+    }
+}
+
+#scs-main {
+    min-height: 100vh;
+    background: left no-repeat url("../../images/scs_back2.jpg");
+    // background-position: 55% bottom;
+    background-size: auto 100%;
+
+
+    @include mixins.mq-small() {
+        background-image: url("../../images/scs_back.jpg");
+    }
+
+    @include mixins.mq-xlarge() {
+        background-image: url("../../images/scs_back3.jpg");
+        background-size: 100% auto;
+    }
+}

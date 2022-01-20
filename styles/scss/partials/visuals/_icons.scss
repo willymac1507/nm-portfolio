@@ -1,3 +1,5 @@
+@use '../utilities/variables' as *;
+
 /* ================================================================== */
 /* === Icons                                                      === */
 /* ================================================================== */
@@ -55,10 +57,28 @@
     }
 
     &--tel:before {
-        content: "\e9e3"
+        content: "\e9e3";
     }
 
     &--mail:before {
-        content: "\ec50"
+        content: "\ec50";
+    }
+
+    &--location:before {
+        content: "\e9f6";
+    }
+
+    &--direction:before {
+        content: "\e9fd";
+    }
+
+    &--road:before {
+        content: "\eac7";
+    }
+
+    &--road,
+    &--location,
+    &--direction {
+        color: $color-logo;
     }
 }
