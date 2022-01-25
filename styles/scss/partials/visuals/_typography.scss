@@ -5,15 +5,22 @@
 /* === Typography                                                 === */
 /* ================================================================== */
 
-.navbar {
-    &__logo {
-        font-size: 5rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: $color-logo;
-        text-shadow: 0px 5px 10px rgba(0, 0, 0, .6);
-    }
+.logo__text {
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-logo;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, .6);
+    transition: 0.2s;
 
+    &:hover {
+        font-size: 5.5rem;
+        transform: rotateZ(360deg);
+        transition: 1s;
+    }
+}
+
+.navbar {
     &__link {
         color: $color-nav;
         font-weight: 600;
