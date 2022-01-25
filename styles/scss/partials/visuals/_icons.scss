@@ -40,6 +40,14 @@
         content: "\ea3c";
     }
 
+    &--facebook:hover,
+    &--twitter:hover,
+    &--linkedin2:hover,
+    &--instagram:hover {
+        font-size: 1.5rem;
+        transition: 0.2s;
+    }
+
     &--facebook:before {
         content: "\ec5c";
     }

@@ -18,6 +18,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 50px;
+        row-gap: 30px;
         min-height: 100vh;
         color: #fff;
 
@@ -46,10 +47,19 @@
         flex-direction: column;
         text-align: justify;
         flex: 1 1 100%;
+        padding: 5px 15px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        backdrop-filter: blur(15px);
+        font-size: 0.8125rem;
 
         @include mixins.mq-large() {
-                flex: 1 1 40%;
-            }
+            flex: 1 1 40%;
+        }
+
+        @include mixins.mq-xlarge() {
+            font-size: 1rem;
+        }
 
         @include mixins.mq-xxlarge() {
             width: 50%;

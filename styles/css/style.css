@@ -658,6 +658,10 @@ a {
 .icon--arrow-forward:before {
   content: "";
 }
+.icon--facebook:hover, .icon--twitter:hover, .icon--linkedin2:hover, .icon--instagram:hover {
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
 .icon--facebook:before {
   content: "";
 }
@@ -879,8 +883,11 @@ footer,
   transition: color 0.25s;
 }
 .portfolio__card:hover .portfolio__image-overlay::after {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   transition: all 0.25s;
+}
+.portfolio__card:hover .portfolio__tooltip {
+  visibility: visible;
 }
 .portfolio__card hr {
   width: 30%;
@@ -896,6 +903,18 @@ footer,
   position: relative;
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.portfolio__tooltip {
+  position: absolute;
+  visibility: hidden;
+  width: 50%;
+  height: 60%;
+  top: 42%;
+  left: 25%;
+  color: #fff;
+  background-color: transparent;
+  font-size: 0.8125rem;
+  z-index: 20;
 }
 .portfolio__image-overlay {
   position: absolute;
@@ -1245,6 +1264,7 @@ footer,
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 50px;
+  row-gap: 30px;
   min-height: 100vh;
   color: #fff;
 }
@@ -1299,10 +1319,20 @@ footer,
   flex-direction: column;
   text-align: justify;
   flex: 1 1 100%;
+  padding: 5px 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  backdrop-filter: blur(15px);
+  font-size: 0.8125rem;
 }
 @media screen and (min-width: 992px) {
   .scs-main__card {
     flex: 1 1 40%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scs-main__card {
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 1500px) {
@@ -1368,6 +1398,13 @@ footer,
   border-radius: 5px;
   font-size: 0.75rem;
   font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+.button:hover {
+  background-color: #494c5f;
+  color: #fff;
+  border-color: #52b2cb;
+  transition: all 0.2s ease-in-out;
 }
 
 /* ================================================================== */
@@ -1440,7 +1477,7 @@ footer,
   width: 100%;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0 0 0;
+  padding: 20px 0 0 0;
   list-style: none;
 }
 .navbar__icon-container {
