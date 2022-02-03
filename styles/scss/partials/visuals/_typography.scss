@@ -194,3 +194,16 @@
         }
     }
 }
+
+.coding {
+
+    &__lang {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    &__desc {
+        font-size: .9rem;
+        line-height: 1.5;
+    }
+}

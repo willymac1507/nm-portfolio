@@ -78,7 +78,43 @@
                         <div class="hamburger__slice"></div>
                         <div class="hamburger__slice"></div>
                     </div>
-                    <h1>Coming Soon ...</h1>
+                    <h1>Coding Examples</h1>
+
+                    <div class="coding__example">
+                        <h2>Slide down navbar</h2>
+                        <iframe class="coding__iframe" src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=monokai&wt=none&l=javascript&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false
+                            &code=const%2520hamburger%2520%253D%2520%2524%28%2522.hamburger%2522%29%253B%250Aconst%2520navLink%2520%253D%2520%2524%28%2522.navbar__link%2522%29%253B%250A%250Ahamburger.click%28function%2520%28%29%2520%257B%250A%2509%2524%28%2522
+.navbar%2522%29.slideToggle%28500%252C%2520function%2520%28%29%2520%257B%250A%2509%2509if%2520%28%2524%28%2522.navbar%2522%29.attr%28%2522style%2522%29%2520%253D%253D%253D%2520%2522display%253A%2520none%253B%2522%29%2520%257B%250A%2509%2509%2509%2524%28%2522
+.navbar%2522%29.removeAttr%28%2522style%2522%29%253B%250A%2509%2509%257D%250A%2509%257D%29%253B%250A%2509hamburger.toggleClass%28%2522hamburger--open%2522%29%253B%250A%257D%29%253B%250A%250AnavLink.click%28function%2520%28%29%2520%257B%250A%2509if%2520%28
+hamburger.is%28%2522%253Avisible%2522%29%29%2520%257B%250A%2509%2509%2524%28%2522.navbar%2522%29.slideToggle%28500%252C%2520function%2520%28%29%2520%257B%250A%2509%2509%2509if%2520%28%2524%28%2522.navbar%2522%29.attr%28%2522
+style%2522%29%2520%253D%253D%253D%2520%2522display%253A%2520none%253B%2522%29%2520%257B%250A%2509%2509%2509%2509%2524%28%2522.navbar%2522%29.removeAttr%28%2522style%2522%29%253B%250A%2509%2509%2509%257D%250A%2509%2509%257D%29%253B%250A%2509%2509
+hamburger.toggleClass%28%2522hamburger--open%2522%29%253B%250A%2509%257D%250A%257D%29%253B%250A%250A%2524%28%2522.hero__headline%2522%29.hide%28%257B%2520queue%253A%2520true%2520%257D%29.delay%282000%29.show%28%257B%2520queue%253A%2520
+true%2520%257D%29%253B%250A%250A%2524%28%2522.hero__subtitle%2522%29.hide%28%257B%2520queue%253A%2520true%2520%257D%29.delay%285000%29.show%28%257B%2520queue%253A%2520true%252C%2520complete%253A%2520function%2520%28%29%2520%257B%250A%2520%2520%2520%2520%2524%28%27
+.animate-typing%27%29.delay%28500%29.hide%28%257Bqueue%253A%2520true%257D%29%253B%250A%257D%2520%257D%29%253B"
+                            sandbox="allow-scripts allow-same-origin">
+                        </iframe>
+                        <p class="coding__lang">Language: JavaScript / jQuery</p>
+                        <p class="coding__desc">The first part of this code is responsible for displaying and hiding a
+                            navigation bar
+                            on smaller screns, with the provision of a 'hamburger' button. The code utilises jQuery to
+                            listen for a user click on the hamburger, at which point the navbar is revealed by 'sliding'
+                            down from the top of the page. The hamburger is then styled to transform the three 'slices'
+                            into a cross. A further click on the hamburger slides the navbar up and reverts the
+                            hamburger
+                            to its original state.
+                        </p>
+                        <p class="coding__desc">The second part of the code sets the timing of a main heading and
+                            subheading reveal.
+                            This works in tandem with text animation giving the impression of the code being typed and
+                            then executed.
+                        </p>
+                        <p class="coding__desc">The use of jQuery ensures that the animation is compatible with most
+                            browsers, including
+                            some legacy examples. In addition it allows for fairly complex animation in a few, concise
+                            lines of code.
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>

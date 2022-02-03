@@ -1,16 +1,30 @@
-@use '../../utilities/mixins';
-@use '../../utilities/variables'as *;
+@use "../../utilities/mixins";
+@use "../../utilities/variables" as *;
 
 /* ================================================================== */
 /* === Coding Page                                                === */
 /* ================================================================== */
 
-.coding-main {
-    &__container {
-        @include mixins.section-container();
-    }
+.coding {
+	&-main {
+		&__container {
+			@include mixins.section-container();
+		}
 
-    &__content {
-        @include mixins.content-container();
-    }
+		&__content {
+			@include mixins.content-container();
+		}
+	}
+
+	&__example {
+		border-top: 1px solid rgba(0, 0, 0, 0.6);
+	}
+
+	&__iframe {
+		width: 100%;
+		height: 300px;
+		border: 0;
+		transform: scale(1);
+		overflow: hidden;
+	}
 }
