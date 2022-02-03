@@ -23,11 +23,36 @@ navLink.click(function () {
 
 $(".hero__headline").hide({ queue: true }).delay(2000).show({ queue: true });
 
-$(".hero__subtitle").hide({ queue: true }).delay(5000).show({ queue: true, complete: function () {
-    $('.animate-typing').delay(500).hide({queue: true});
-} });
+$(".hero__subtitle")
+	.hide({ queue: true })
+	.delay(5000)
+	.show({
+		queue: true,
+		complete: function () {
+			$(".animate-typing").delay(500).hide({ queue: true });
+		},
+	});
 
 $(".animsition").animsition({
 	inDuration: 200,
 	outDuration: 800,
 });
+
+$(document).ready(function () {
+	validate();
+	$("#fname, #lname, #email, #subject, #message").change(validate);
+});
+
+function validate() {
+	if (
+		$("#fname").val().length > 0 &&
+		$("#lname").val().length > 0 &&
+		$("#email").val().length > 0 &&
+		$("#message").val().length > 0 &&
+		$("#subject").val().length > 0
+	) {
+		$("#contact__submit").attr("disabled", false);
+	} else {
+		$("#contact__submit").attr("disabled", true);
+	}
+}

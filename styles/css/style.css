@@ -491,6 +491,10 @@ a {
   border-top: 1px solid rgba(0, 0, 0, 0.4);
 }
 
+.red {
+  color: red;
+}
+
 .logo__text {
   font-size: 5rem;
   font-weight: 700;
