@@ -4,6 +4,13 @@
 /* ================================================================== */
 /* === Typography                                                 === */
 /* ================================================================== */
+.portfolio__heading {
+    flex: 1 0 100%;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
 
 .logo__text {
     font-size: 5rem;
@@ -15,7 +22,6 @@
 
     &:hover {
         font-size: 5.5rem;
-        transform: rotateZ(360deg);
         transition: 1s;
     }
 }
@@ -199,11 +205,12 @@
 
     &__lang {
         font-size: 1rem;
-        font-weight: 600;
+        font-weight: 700;
     }
 
     &__desc {
         font-size: .9rem;
+        font-weight: normal;
         line-height: 1.5;
     }
 }
