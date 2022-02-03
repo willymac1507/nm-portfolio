@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/css/fonts.css">
     <link rel="stylesheet" href="styles/css/style.css">
 </head>
+
 <body>
 
     <section id="nav">
@@ -25,7 +27,7 @@
                         </a>
                     </li>
                     <li class="navbar__item">
-                        <a href="#portfolio" class="navbar__link">
+                        <a href="index.html#portfolio" class="navbar__link">
                             My Portfolio
                         </a>
                     </li>
@@ -40,23 +42,25 @@
                         </a>
                     </li>
                     <li class="navbar__item item--emphasis">
-                        <a href="#contact" class="navbar__link link--emphasis">
+                        <a href="index.html#contact" class="navbar__link link--emphasis">
                             Contact Me
                         </a>
                     </li>
                     <li class="navbar__item item--social">
-                        <a href="https://www.facebook.com/will.mccloy" target="_blank" class="navbar__icon-container">
+                        <a href="https://www.facebook.com/will.mccloy" target="_blank" rel="noopener noreferrer"
+                            class="navbar__icon-container" title="Facebook">
                             <div class="icon icon--facebook"></div>
                         </a>
-                        <a href="https://www.instagram.com/bipolarbilly70/" target="_blank"
-                            class="navbar__icon-container">
+                        <a href="https://www.instagram.com/bipolarbilly70/" target="_blank" rel="noopener noreferrer"
+                            class="navbar__icon-container" title="Instagram">
                             <div class="icon icon--instagram"></div>
                         </a>
-                        <a href="https://twitter.com/BiPolarBilly13" target="_blank" class="navbar__icon-container">
+                        <a href="https://twitter.com/BiPolarBilly13" target="_blank" rel="noopener noreferrer"
+                            class="navbar__icon-container" title="Twitter">
                             <div class="icon icon--twitter"></div>
                         </a>
-                        <a href="https://www.linkedin.com/in/will-mccloy-5a201196/" target="_blank"
-                            class="navbar__icon-container">
+                        <a href="https://www.linkedin.com/in/will-mccloy-5a201196/" target="_blank" rel="noopener noreferrer"
+                            class="navbar__icon-container" title="LinkedIn">
                             <div class="icon icon--linkedin2"></div>
                         </a>
                     </li>
@@ -64,7 +68,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="about">
         <div class="about__container">
             <div class="about__content">
@@ -111,14 +115,16 @@
                     <div class="about__heading">Hi!</div>
                     <div class="about__detail-large">I'm Will McCloy, a web developer based in Norwich, UK.</div>
                 </div>
-                
+
                 <div class="about__block block--journey">
                     <div class="about__heading heading--small">My Journey</div>
                     <div class="about__sub-block">
                         <h4>Where I am <span class="icon icon--location"></span></h4>
                         <div class="about__detail">
-                            I'm enrolled on the Scion Coalition Scheme with Netmatters, learning how to be a fully fledged full-stack developer.
-                            I'm gaining experience in as many web and software technologies as I can, with my current focus on front-end tech such as
+                            I'm enrolled on the Scion Coalition Scheme with Netmatters, learning how to be a fully
+                            fledged full-stack developer.
+                            I'm gaining experience in as many web and software technologies as I can, with my current
+                            focus on front-end tech such as
                             HTML, CSS and Sass.
                         </div>
                     </div>
@@ -126,15 +132,18 @@
                         <h4>How I got here <span class="icon icon--direction"></span></h4>
                         <div class="about__detail">
                             I come from a long career in IT service management, having been responsible for
-                            several blue-chip web offerings including Aviva and TSO. I decided I wanted to see what goes on
+                            several blue-chip web offerings including Aviva and TSO. I decided I wanted to see what goes
+                            on
                             under the bonnet, and thanks to the SCS I am on my way!
                         </div>
                     </div>
                     <div class="about__sub-block">
                         <h4>Where I'm going <span class="icon icon--road"></span></h4>
                         <div class="about__detail">
-                            In the short-term I want to gain as much knowledge and experience as possible as a Scion.  Medium to long-term aims
-                            are focused on becoming an experienced, trusted and ultimately in-demand full-stack developer building and maintaining
+                            In the short-term I want to gain as much knowledge and experience as possible as a Scion.
+                            Medium to long-term aims
+                            are focused on becoming an experienced, trusted and ultimately in-demand full-stack
+                            developer building and maintaining
                             innovative, responsive and transformative digital solutions.
                         </div>
                     </div>
@@ -143,7 +152,10 @@
             </div>
         </div>
     </section>
+    <!-- Scripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js"></script>
 
-    
 </body>
+
 </html>

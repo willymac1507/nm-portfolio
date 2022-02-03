@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/css/fonts.css">
     <link rel="stylesheet" href="styles/css/style.css">
 </head>
@@ -27,7 +27,7 @@
                         </a>
                     </li>
                     <li class="navbar__item">
-                        <a href="#portfolio" class="navbar__link">
+                        <a href="index.html#portfolio" class="navbar__link">
                             My Portfolio
                         </a>
                     </li>
@@ -42,23 +42,25 @@
                         </a>
                     </li>
                     <li class="navbar__item item--emphasis">
-                        <a href="#contact" class="navbar__link link--emphasis">
+                        <a href="index.html#contact" class="navbar__link link--emphasis">
                             Contact Me
                         </a>
                     </li>
                     <li class="navbar__item item--social">
-                        <a href="https://www.facebook.com/will.mccloy" target="_blank" class="navbar__icon-container">
+                        <a href="https://www.facebook.com/will.mccloy" target="_blank" class="navbar__icon-container"
+                            rel="noopener noreferrer" title="Facebook">
                             <div class="icon icon--facebook"></div>
                         </a>
                         <a href="https://www.instagram.com/bipolarbilly70/" target="_blank"
-                            class="navbar__icon-container">
+                            class="navbar__icon-container" rel="noopener noreferrer" title="Instagram">
                             <div class="icon icon--instagram"></div>
                         </a>
-                        <a href="https://twitter.com/BiPolarBilly13" target="_blank" class="navbar__icon-container">
+                        <a href="https://twitter.com/BiPolarBilly13" target="_blank" class="navbar__icon-container"
+                            rel="noopener noreferrer" title="Twitter">
                             <div class="icon icon--twitter"></div>
                         </a>
                         <a href="https://www.linkedin.com/in/will-mccloy-5a201196/" target="_blank"
-                            class="navbar__icon-container">
+                            class="navbar__icon-container" rel="noopener noreferrer" title="LinkedIn">
                             <div class="icon icon--linkedin2"></div>
                         </a>
                     </li>
@@ -74,7 +76,9 @@
             </div>
         </div>
     </section>
-
+    <!-- Scripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
