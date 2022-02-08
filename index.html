@@ -246,7 +246,8 @@
                         <p class="contact__text">Alternatively, complete and submit the form and I'll get back to you as
                             soon as I can.</p>
                     </div>
-                    <form method="post" class="contact__form-container">
+                    <form id="contactForm" class="contact__form-container" onsubmit="return false">
+                        <div class="success">Your message has been sent. Thanks.</div>
                         <div class="contact__input">
                             <input id="fname" name="fname" type="text" class="input--fname" placeholder="First Name*">
                         </div>
@@ -264,7 +265,7 @@
                             <textarea id="message" name="message" class="input--message"
                                 placeholder="Message"></textarea>
                         </div>
-                        <a href="#" class="button" id="contact__submit">Submit</a>
+                        <input type="submit" class="button" id="contact__submit">
                     </form>
                 </div>
             </div>
