@@ -119,6 +119,11 @@
         font-weight: 600;
     }
 
+    &__required {
+        display: flex;
+        align-items: center;
+    }
+
     &--email {
         color: $color-nav;
         transition: 0.25s;
