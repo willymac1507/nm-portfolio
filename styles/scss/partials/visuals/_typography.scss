@@ -214,15 +214,26 @@
 
 .coding {
 	&__lang {
+        flex: 0 0 100%;
 		font-size: 1rem;
 		font-weight: 700;
+
+        @include mixins.mq-xlarge() {
+            display: flex;
+            align-items: center;
+            height: 41px;
+        }
 	}
 
 	&__desc {
+        flex: 0 0 100%;
 		font-size: 0.9rem;
 		font-weight: normal;
 		line-height: 1.5;
         text-align: justify;
+        // @include mixins.mq-xlarge() {
+        //     flex: 0 0 45%;
+        // }
 	}
 
 	&__scroller {

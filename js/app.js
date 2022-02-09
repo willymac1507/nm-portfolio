@@ -29,11 +29,11 @@ $(document).ready(function () {
 	scroller.click(function (event) {
 		if (event.target.nodeName === 'A') {
 			const example = event.target.getAttribute('href');
-			const frame = $(`${example} iframe`);
+			const frame = $(`${example} .coding__code`);
 			const scroller = $(`${example} a`);
 			const icon = $(`${example} a div`);
 			scroller.toggleClass('scroller--expanded scroller--collapsed');
-			frame.toggleClass('iframe--expanded');
+			frame.toggleClass('code--expanded');
 			icon.toggleClass('icon--arrow-down icon--arrow-up');
 		}
 	})
