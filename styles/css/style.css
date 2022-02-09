@@ -637,11 +637,22 @@ a {
     font-size: 2rem;
   }
 }
+@media screen and (min-width: 1500px) {
+  .about__heading {
+    font-size: calc(100vw * 0.016);
+  }
+}
 .about__sub-block h4 {
   font-size: 1.3rem;
 }
+@media screen and (min-width: 1500px) {
+  .about__sub-block h4 {
+    font-size: calc(100vw * 0.011);
+  }
+}
 .about__detail {
   font-size: 1rem;
+  line-height: min(1.8em, 40px);
 }
 @media screen and (min-width: 576px) {
   .about__detail {
@@ -663,7 +674,13 @@ a {
 }
 @media screen and (min-width: 1500px) {
   .about__detail-large {
-    font-size: 1.4rem;
+    font-size: calc(100vw * 0.012);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .skills__list-item {
+    font-size: calc(100vw * 0.01);
   }
 }
 
@@ -1187,6 +1204,7 @@ footer,
   align-items: flex-start;
   order: 1;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(4px);
   width: 100%;
   padding: 15px;
@@ -1234,7 +1252,7 @@ footer,
   .block--journey {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
   }
 }
 
@@ -1359,7 +1377,7 @@ footer,
 /* ================================================================== */
 .scs-main__container {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   min-height: 100vh;
 }
 @media screen and (min-width: 768px) and (min-height: 576px) {
@@ -1433,8 +1451,9 @@ footer,
   text-align: justify;
   flex: 1 1 100%;
   padding: 5px 15px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   font-size: 0.8125rem;
 }

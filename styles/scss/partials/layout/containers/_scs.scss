@@ -8,7 +8,7 @@
 .scs-main {
     &__container {
         @include mixins.section-container();
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.3);
         min-height: 100vh;
     }
 
@@ -48,8 +48,9 @@
         text-align: justify;
         flex: 1 1 100%;
         padding: 5px 15px;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.6);
         border-radius: 5px;
+        -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
         font-size: 0.8125rem;
 
