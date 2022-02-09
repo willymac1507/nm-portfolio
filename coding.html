@@ -20,6 +20,7 @@
 
 <body>
     <div class="animsition">
+        <div class="page--overlay"></div>
         <section id="nav">
             <div class="navbar">
                 <a href="index.html" class="navbar__logo animsition-link"><span class="logo__text">w</span></a>
@@ -69,7 +70,7 @@
             </div>
         </section>
 
-        <section id="main">
+        <section id="coding">
             <div class="coding-main__container">
                 <div class="coding-main__content">
                     <div class="hamburger">
@@ -77,7 +78,7 @@
                         <div class="hamburger__slice"></div>
                         <div class="hamburger__slice"></div>
                     </div>
-                    <h1>Coding Examples</h1>
+                    <h1 class="coding-main__title">Coding Examples</h1>
 
                     <div class="coding__example" id="example--1">
                         <div class="coding__head">
@@ -96,21 +97,23 @@
                         </a>
                         <div class="coding__text">
                             <h3 class="coding__lang">Language: JavaScript / jQuery</h3>
-                            <p class="coding__desc">The first part of this code is responsible for displaying and hiding
+                            <p class="coding__desc">The code is responsible for displaying and hiding
                                 a
                                 navigation bar on smaller screens, with the provision of a 'hamburger' button. The code
                                 utilises jQuery to
-                                listen for a user click on the hamburger, at which point the navbar is revealed by
+                                listen for a user click on the hamburger, at which point the function <code>toggleNav()</code>
+                                 is called.  This allows the navbar to be revealed by
                                 'sliding'
-                                down from the top of the page. The hamburger is then styled to transform the three
+                                down from the top of the page. The hamburger is styled to transform the three
                                 'slices'
-                                into a cross. A further click on the hamburger slides the navbar up and reverts the
-                                hamburger to its original state.
+                                into a cross. Finally a page overlay is added to dim the background and 
+                                block the ability to click on any other elements.
                             </p>
-                            <p class="coding__desc">The second part of the code sets the timing of a main heading and
-                                subheading reveal. This works in tandem with text animation giving the impression of the
-                                code being typed and
-                                then executed.
+                            <p class="coding__desc">A further click on the hamburger slides the navbar up and reverts the
+                                hamburger to its original state, hiding the page overlay in the process.  This action is also applied
+                                to the nav links to ensure the navbar hides when a link is clicked.  A final click listener on the 
+                                page overlay allows the user to close the navbar by clicking outside the navbar on the screen, and not only
+                                by clicking the hamburger.
                             </p>
                             <p class="coding__desc">The use of jQuery ensures that the animation is compatible with most
                                 browsers, including some legacy examples. In addition it allows for fairly complex
@@ -119,7 +122,6 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

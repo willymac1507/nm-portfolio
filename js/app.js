@@ -25,18 +25,18 @@ $(document).ready(function () {
 	});
 
 	// Add click listener and functionality to coding scroller
-	const scroller = $('.coding__example');
+	const scroller = $(".coding__example");
 	scroller.click(function (event) {
-		if (event.target.nodeName === 'A') {
-			const example = event.target.getAttribute('href');
+		if (event.target.nodeName === "A") {
+			const example = event.target.getAttribute("href");
 			const frame = $(`${example} .coding__code`);
 			const scroller = $(`${example} a`);
 			const icon = $(`${example} a div`);
-			scroller.toggleClass('scroller--expanded scroller--collapsed');
-			frame.toggleClass('code--expanded');
-			icon.toggleClass('icon--arrow-down icon--arrow-up');
+			scroller.toggleClass("scroller--expanded scroller--collapsed");
+			frame.toggleClass("code--expanded");
+			icon.toggleClass("icon--arrow-down icon--arrow-up");
 		}
-	})
+	});
 
 	// Hide main headline and sub headline until animation complete
 	$(".hero__headline").hide({ queue: true }).delay(2000).show({ queue: true });
@@ -53,8 +53,8 @@ $(document).ready(function () {
 
 	// Set up animsition plugin
 	$(".animsition").animsition({
-		inDuration: 200,
-		outDuration: 400,
+		inDuration: 400,
+		outDuration: 0,
 	});
 });
 
@@ -88,9 +88,17 @@ function toggleNav() {
 		if ($(".navbar").attr("style") === "display: none;") {
 			$(".navbar").removeAttr("style");
 			$("body").off("click");
+		} else if ($(".navbar").attr("style") === "display: block;") {
+			// Add click listener to page overlay to allow click anywhere to close
+			$(".page--overlay").click(function (e) {
+				e.stopImmediatePropagation();
+				toggleNav();
+				return;
+			});
 		}
-		hamburger.toggleClass("hamburger--open");
 	});
+	hamburger.toggleClass("hamburger--open");
+	$(".page--overlay").toggleClass("overlay--dark");
 }
 
 // Script to run on form submission - will be removed when real functionality added to script

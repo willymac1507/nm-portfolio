@@ -122,7 +122,9 @@
 		align-items: center;
 	}
 
-	&--email {
+	&--email,
+    &--tel {
+        display: block;
 		color: $color-nav;
 		transition: 0.25s;
 
@@ -238,10 +240,15 @@
 
         @include mixins.mq-xlarge() {
             display: flex;
-            align-items: center;
-            height: 41px;
+            align-items: flex-end;
+            height: 43px;
         }
 	}
+
+    &-main__title {
+        margin-top: 0;
+        padding-top: 0.67em;
+    }
 
 	&__desc {
         flex: 0 0 100%;
@@ -249,9 +256,6 @@
 		font-weight: normal;
 		line-height: 1.5;
         text-align: justify;
-        // @include mixins.mq-xlarge() {
-        //     flex: 0 0 45%;
-        // }
 	}
 
 	&__scroller {

@@ -27,6 +27,7 @@
 		overflow: visible;
 		transition: height 1s;
 		border-top: 1px solid rgba(0, 0, 0, 0.6);
+		margin-bottom: 30px;
 
 		@include mixins.mq-xlarge() {
 			flex-direction: row;
@@ -67,6 +68,6 @@
 }
 
 .code--expanded {
-	max-height: 83vh;
+	max-height: 81vh;
 	transition: max-height 1s;
 }

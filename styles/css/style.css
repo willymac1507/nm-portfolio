@@ -470,6 +470,24 @@ a {
 /* ================================================================== */
 /* === Images                                                     === */
 /* ================================================================== */
+.page--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 1s;
+}
+
+.overlay--dark {
+  opacity: 0.6;
+  z-index: 9;
+  transition: opacity 1s;
+}
+
 .portfolio__image {
   width: 100%;
   border-radius: 5px;
@@ -586,11 +604,12 @@ a {
   display: flex;
   align-items: center;
 }
-.contact--email {
+.contact--email, .contact--tel {
+  display: block;
   color: #494c5f;
   transition: 0.25s;
 }
-.contact--email:hover {
+.contact--email:hover, .contact--tel:hover {
   font-size: 1.1rem;
   transition: 0.25s;
 }
@@ -692,9 +711,13 @@ a {
 @media screen and (min-width: 1200px) {
   .coding__lang {
     display: flex;
-    align-items: center;
-    height: 41px;
+    align-items: flex-end;
+    height: 43px;
   }
+}
+.coding-main__title {
+  margin-top: 0;
+  padding-top: 0.67em;
 }
 .coding__desc {
   flex: 0 0 100%;
@@ -1329,6 +1352,7 @@ footer,
   overflow: visible;
   transition: height 1s;
   border-top: 1px solid rgba(0, 0, 0, 0.6);
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .coding__example {
@@ -1368,7 +1392,7 @@ footer,
 }
 
 .code--expanded {
-  max-height: 83vh;
+  max-height: 81vh;
   transition: max-height 1s;
 }
 
