@@ -8,11 +8,7 @@
 }
 
 @mixin section-image() {
-    background-size: auto 100%;
-
-    @include mq-large() {
-        background-size: cover;
-    }
+    background-size: cover;
 }
 
 @mixin section-container() {

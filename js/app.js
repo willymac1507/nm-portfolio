@@ -1,64 +1,61 @@
 const hamburger = $(".hamburger");
 const navLink = $(".navbar__link");
 
-// Start form validation listener
+// When document ready
 $(document).ready(function () {
-	validate();
-	$("#fname, #lname, #email, #subject, #message").keyup(validate);
-});
-
-// Hide success message - to be revealed on form submission
-$(".success").hide();
-
-function toggleNav() {
-	$(".navbar").slideToggle(500, function () {
-		if ($(".navbar").attr("style") === "display: none;") {
-			$(".navbar").removeAttr("style");
-			$("body").off("click");
-		}
-		hamburger.toggleClass("hamburger--open");
-	});
-}
-
-// Add click listener  and functionality to hamburger
-hamburger.click(function () {
-	toggleNav();
-});
-
-// Add click listener and functionality to nav links
-navLink.click(function () {
-	if (hamburger.is(":visible")) {
-		toggleNav();
+	// Start form validation listener
+	if ($("#contactForm").length) {
+		validate();
+		$("#fname, #lname, #email, #subject, #message").keyup(validate);
 	}
-});
 
-// Hide main headline and sub headline  until animation complete
-$(".hero__headline").hide({ queue: true }).delay(2000).show({ queue: true });
+	// Hide success message - to be revealed on form submission
+	$(".success").hide();
 
-$(".hero__subtitle")
-	.hide({ queue: true })
-	.delay(5000)
-	.show({
-		queue: true,
-		complete: function () {
-			$(".animate-typing").delay(500).hide({ queue: true });
-		},
+	// Add click listener  and functionality to hamburger
+	hamburger.click(function () {
+		toggleNav();
 	});
 
-// Set up animsition plugin
-$(".animsition").animsition({
-	inDuration: 200,
-	outDuration: 800,
-});
+	// Add click listener and functionality to nav links
+	navLink.click(function () {
+		if (hamburger.is(":visible")) {
+			toggleNav();
+		}
+	});
 
-// Script to run on form submission - will be removed when real functionality added to script
-$("#contactForm").submit(function () {
-	$("#fname, #lname, #email, #subject, #message").val("");
-	$(".success").slideDown().delay(2000).slideUp();
-	$("#contact__submit").attr("disabled", true).addClass("button--disabled");
-	$(".contact__required").text(
-		"Please complete all fields marked * before submitting."
-	);
+	// Add click listener and functionality to coding scroller
+	const scroller = $('.coding__example');
+	scroller.click(function (event) {
+		if (event.target.nodeName === 'A') {
+			const example = event.target.getAttribute('href');
+			const frame = $(`${example} iframe`);
+			const scroller = $(`${example} a`);
+			const icon = $(`${example} a div`);
+			scroller.toggleClass('scroller--expanded scroller--collapsed');
+			frame.toggleClass('iframe--expanded');
+			icon.toggleClass('icon--arrow-down icon--arrow-up');
+		}
+	})
+
+	// Hide main headline and sub headline until animation complete
+	$(".hero__headline").hide({ queue: true }).delay(2000).show({ queue: true });
+
+	$(".hero__subtitle")
+		.hide({ queue: true })
+		.delay(5000)
+		.show({
+			queue: true,
+			complete: function () {
+				$(".animate-typing").delay(500).hide({ queue: true });
+			},
+		});
+
+	// Set up animsition plugin
+	$(".animsition").animsition({
+		inDuration: 200,
+		outDuration: 400,
+	});
 });
 
 // Form validation function
@@ -84,6 +81,27 @@ function validate() {
 		$("#contact__submit").attr("disabled", true).addClass("button--disabled");
 	}
 }
+
+// Navbar and hamburger toggle function
+function toggleNav() {
+	$(".navbar").slideToggle(500, function () {
+		if ($(".navbar").attr("style") === "display: none;") {
+			$(".navbar").removeAttr("style");
+			$("body").off("click");
+		}
+		hamburger.toggleClass("hamburger--open");
+	});
+}
+
+// Script to run on form submission - will be removed when real functionality added to script
+$("#contactForm").submit(function () {
+	$("#fname, #lname, #email, #subject, #message").val("");
+	$(".success").slideDown().delay(2000).slideUp();
+	$("#contact__submit").attr("disabled", true).addClass("button--disabled");
+	$(".contact__required").text(
+		"Please complete all fields marked * before submitting."
+	);
+});
 
 // Script to add smooth scrolling effect to # links.
 // Select all links with hashes

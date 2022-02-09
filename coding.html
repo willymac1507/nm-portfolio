@@ -49,15 +49,11 @@
                             </a>
                         </li>
                         <li class="navbar__item item--social">
-                            <a href="https://www.facebook.com/will.mccloy" target="_blank"
-                                class="navbar__icon-container" rel="noopener noreferrer" title="Facebook">
-                                <div class="icon icon--facebook"></div>
+                            <a href="https://github.com/willymac1507" target="_blank"
+                                class="navbar__icon-container" rel="noopener noreferrer" title="Github">
+                                <div class="icon icon--github"></div>
                             </a>
-                            <a href="https://www.instagram.com/bipolarbilly70/" target="_blank"
-                                class="navbar__icon-container" rel="noopener noreferrer" title="Instagram">
-                                <div class="icon icon--instagram"></div>
-                            </a>
-                            <a href="https://twitter.com/BiPolarBilly13" target="_blank" class="navbar__icon-container"
+                            <a href="https://twitter.com/camelCaseLtd" target="_blank" class="navbar__icon-container"
                                 rel="noopener noreferrer" title="Twitter">
                                 <div class="icon icon--twitter"></div>
                             </a>
@@ -81,9 +77,10 @@
                     </div>
                     <h1>Coding Examples</h1>
 
-                    <div class="coding__example">
+                    <div class="coding__example" id="example--1">
                         <h2>Slide down navbar</h2>
-                        <iframe class="coding__iframe" src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=monokai&wt=none&l=javascript&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false
+                        <div class="coding__code">
+                            <iframe class="coding__iframe" src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=monokai&wt=none&l=javascript&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false
                             &code=const%2520hamburger%2520%253D%2520%2524%28%2522.hamburger%2522%29%253B%250Aconst%2520navLink%2520%253D%2520%2524%28%2522.navbar__link%2522%29%253B%250A%250Ahamburger.click%28function%2520%28%29%2520%257B%250A%2509%2524%28%2522
 .navbar%2522%29.slideToggle%28500%252C%2520function%2520%28%29%2520%257B%250A%2509%2509if%2520%28%2524%28%2522.navbar%2522%29.attr%28%2522style%2522%29%2520%253D%253D%253D%2520%2522display%253A%2520none%253B%2522%29%2520%257B%250A%2509%2509%2509%2524%28%2522
 .navbar%2522%29.removeAttr%28%2522style%2522%29%253B%250A%2509%2509%257D%250A%2509%257D%29%253B%250A%2509hamburger.toggleClass%28%2522hamburger--open%2522%29%253B%250A%257D%29%253B%250A%250AnavLink.click%28function%2520%28%29%2520%257B%250A%2509if%2520%28
@@ -94,7 +91,11 @@ true%2520%257D%29%253B%250A%250A%2524%28%2522.hero__subtitle%2522%29.hide%28%257
 .animate-typing%27%29.delay%28500%29.hide%28%257Bqueue%253A%2520true%257D%29%253B%250A%257D%2520%257D%29%253B"
                             sandbox="allow-scripts allow-same-origin">
                         </iframe>
-                        <p class="coding__lang">Language: JavaScript / jQuery</p>
+                        </div>
+                        <a href="#example--1" class="coding__scroller scroller--collapsed"><div class="icon icon--arrow-down"></div>
+                        </a>
+                        
+                        <h3>Language: JavaScript / jQuery</h3>
                         <p class="coding__desc">The first part of this code is responsible for displaying and hiding a
                             navigation bar on smaller screens, with the provision of a 'hamburger' button. The code utilises jQuery to
                             listen for a user click on the hamburger, at which point the navbar is revealed by 'sliding'
