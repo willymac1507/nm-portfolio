@@ -27,8 +27,14 @@ $(document).ready(function () {
 	// Add click listener and functionality to coding scroller
 	const scroller = $(".coding__example");
 	scroller.click(function (event) {
-		if (event.target.nodeName === "A") {
-			const example = event.target.getAttribute("href");
+		console.log(event.target.parentNode.nodeName);
+		if (event.target.nodeName === "A" || event.target.parentNode.nodeName === "A") {
+			let example;
+			if (event.target.nodeName === "A") {
+				example = event.target.getAttribute("href");
+			} else {
+				example = event.target.parentNode.getAttribute("href");
+			}
 			const frame = $(`${example} .coding__code`);
 			const scroller = $(`${example} a`);
 			const icon = $(`${example} a div`);
@@ -52,10 +58,10 @@ $(document).ready(function () {
 		});
 
 	// Set up animsition plugin
-	$(".animsition").animsition({
-		inDuration: 400,
-		outDuration: 0,
-	});
+	// $(".animsition").animsition({
+	// 	inDuration: 400,
+	// 	outDuration: 0,
+	// });
 });
 
 // Form validation function
