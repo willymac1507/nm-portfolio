@@ -93,9 +93,10 @@ function toggleNav() {
 	$(".navbar").slideToggle(500, function () {
 		if ($(".navbar").attr("style") === "display: none;") {
 			$(".navbar").removeAttr("style");
-			$("body").off("click");
+			$(".main__container").removeClass('body--hide');
 		} else if ($(".navbar").attr("style") === "display: block;") {
 			// Add click listener to page overlay to allow click anywhere to close
+			$(".main__container").addClass('body--hide');
 			$(".page--overlay").click(function (e) {
 				e.stopImmediatePropagation();
 				toggleNav();

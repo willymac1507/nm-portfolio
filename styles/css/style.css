@@ -856,6 +856,13 @@ footer,
 /* ================================================================== */
 /* === Home Page                                                  === */
 /* ================================================================== */
+.main__container {
+  height: 100vh;
+}
+.main__container.body--hide {
+  overflow: hidden;
+}
+
 .hero__container {
   width: 100%;
   height: 100vh;
