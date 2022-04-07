@@ -3,6 +3,9 @@ const navLink = $(".navbar__link");
 
 // When document ready
 $(document).ready(function () {
+	// Only show scroller buttons if content is overflowing
+	toggleScroller()
+
 	// Start form validation listener
 	if ($("#contactForm").length) {
 		validate();
@@ -45,15 +48,23 @@ $(document).ready(function () {
 	});
 
 	// Hide main headline and sub headline until animation complete
-	$(".hero__headline").hide({ queue: true }).delay(2000).show({ queue: true });
+	$(".hero__headline").hide({
+		queue: true
+	}).delay(2000).show({
+		queue: true
+	});
 
 	$(".hero__subtitle")
-		.hide({ queue: true })
+		.hide({
+			queue: true
+		})
 		.delay(5000)
 		.show({
 			queue: true,
 			complete: function () {
-				$(".animate-typing").delay(500).hide({ queue: true });
+				$(".animate-typing").delay(500).hide({
+					queue: true
+				});
 			},
 		});
 
@@ -63,6 +74,23 @@ $(document).ready(function () {
 	// 	outDuration: 0,
 	// });
 });
+
+// Scroller visibility toggle function
+function toggleScroller() {
+	const container = $(".coding__code");
+	for (var i = 0; i < container.length; i++) {
+		const example = container[i].offsetParent;
+		const contentHeight = $(container[i]).find('img')[0].clientHeight;
+		const containerHeight = container[i].clientHeight;
+		const scroller = $(example).find('a')[0];
+		console.log(contentHeight, container[i].clientHeight, scroller);
+		if (containerHeight >= contentHeight) {
+			$(scroller).css('display', 'none');
+		}
+		
+	}
+	
+}
 
 // Form validation function
 function validate() {
@@ -108,6 +136,11 @@ function toggleNav() {
 	$(".page--overlay").toggleClass("overlay--dark");
 }
 
+// reload page on orientation change
+window.onorientationchange = function () {
+	window.location.reload();
+};
+
 // Script to run on form submission - will be removed when real functionality added to script
 $("#contactForm").submit(function () {
 	$("#fname, #lname, #email, #subject, #message").val("");
@@ -128,7 +161,7 @@ $('a[href*="#"]')
 		// On-page links
 		if (
 			location.pathname.replace(/^\//, "") ==
-				this.pathname.replace(/^\//, "") &&
+			this.pathname.replace(/^\//, "") &&
 			location.hostname == this.hostname
 		) {
 			// Figure out element to scroll to
@@ -138,8 +171,7 @@ $('a[href*="#"]')
 			if (target.length) {
 				// Only prevent default if animation is actually gonna happen
 				event.preventDefault();
-				$("html, body").animate(
-					{
+				$("html, body").animate({
 						scrollTop: target.offset().top,
 					},
 					1000,
