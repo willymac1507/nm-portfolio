@@ -5,6 +5,24 @@
 /* === Coding Page                                                === */
 /* ================================================================== */
 
+.example {
+	&__container {
+		border-top: 1px solid rgba(0, 0, 0, 0.6);
+		@include mixins.mq-xlarge {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+	}
+}
+
+#example--2a, #example--2b {
+	border: 0;
+	padding-bottom: 0;
+	margin-bottom: 10px;
+}
+
 .coding {
 	&-main {
 		&__container {
@@ -22,16 +40,17 @@
 		flex-direction: column;
 		width: 100%;
 		gap: 30px;
-		border: 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 		transform: scale(1);
 		overflow: visible;
 		transition: height 1s;
-		border-top: 1px solid rgba(0, 0, 0, 0.6);
+		padding-bottom: 30px;
 		margin-bottom: 30px;
 
-		@include mixins.mq-xlarge() {
+		// @include mixins.mq-xlarge() {
+		// 	flex: 0 0 45%;
 			flex-direction: row;
-		}
+		// }
 	}
 
 	&__code {
@@ -48,7 +67,10 @@
 	&__head {
 		flex: 0 0 100%;
 		@include mixins.mq-xlarge() {
-			flex: 0 0 55%;
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	gap: 30px;
+			flex: 1 0 50%;
 		}
 	}
 

@@ -703,6 +703,9 @@ a {
   }
 }
 
+.coding__head h2 {
+  flex: 0 0 100%;
+}
 .coding__lang {
   flex: 0 0 100%;
   font-size: 1rem;
@@ -1306,6 +1309,23 @@ footer,
 /* ================================================================== */
 /* === Coding Page                                                === */
 /* ================================================================== */
+.example__container {
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+}
+@media screen and (min-width: 1200px) {
+  .example__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+#example--2a, #example--2b {
+  border: 0;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
 .coding-main__container {
   width: 100%;
 }
@@ -1354,17 +1374,13 @@ footer,
   flex-direction: column;
   width: 100%;
   gap: 30px;
-  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
   transform: scale(1);
   overflow: visible;
   transition: height 1s;
-  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  padding-bottom: 30px;
   margin-bottom: 30px;
-}
-@media screen and (min-width: 1200px) {
-  .coding__example {
-    flex-direction: row;
-  }
+  flex-direction: row;
 }
 .coding__code {
   max-height: 30vh;
@@ -1381,7 +1397,7 @@ footer,
 }
 @media screen and (min-width: 1200px) {
   .coding__head {
-    flex: 0 0 55%;
+    flex: 1 0 50%;
   }
 }
 .coding__scroller {

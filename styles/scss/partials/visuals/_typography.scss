@@ -1,4 +1,4 @@
-@use "../utilities/variables" as *;
+@use "../utilities/variables"as *;
 @use "../utilities/mixins";
 
 /* ================================================================== */
@@ -53,6 +53,7 @@
 }
 
 .hero {
+
 	&__headline,
 	&__subtitle,
 	&__foot {
@@ -123,8 +124,8 @@
 	}
 
 	&--email,
-    &--tel {
-        display: block;
+	&--tel {
+		display: block;
 		color: $color-nav;
 		transition: 0.25s;
 
@@ -182,7 +183,7 @@
 			font-size: 2rem;
 		}
 
-        @include mixins.mq-xxlarge() {
+		@include mixins.mq-xxlarge() {
 			font-size: calc(100vw * 0.016);
 		}
 	}
@@ -191,16 +192,16 @@
 		h4 {
 			font-size: 1.3rem;
 
-            @include mixins.mq-xxlarge() {
-                font-size: calc(100vw * 0.011);
-            }
+			@include mixins.mq-xxlarge() {
+				font-size: calc(100vw * 0.011);
+			}
 		}
 
 	}
 
 	&__detail {
 		font-size: 1rem;
-        line-height: min(1.8em, 40px);
+		line-height: min(1.8em, 40px);
 
 		@include mixins.mq-small() {
 			font-size: 0.8125rem;
@@ -225,37 +226,41 @@
 }
 
 .skills {
-    &__list-item {
-        @include mixins.mq-xxlarge() {
+	&__list-item {
+		@include mixins.mq-xxlarge() {
 			font-size: calc(100vw * 0.01);
 		}
-    }
+	}
 }
 
 .coding {
+	&__head h2 {
+		flex: 0 0 100%;
+	}
+
 	&__lang {
-        flex: 0 0 100%;
+		flex: 0 0 100%;
 		font-size: 1rem;
 		font-weight: 700;
 
-        @include mixins.mq-xlarge() {
-            display: flex;
-            align-items: flex-end;
-            height: 43px;
-        }
+		@include mixins.mq-xlarge() {
+			display: flex;
+			align-items: flex-end;
+			height: 43px;
+		}
 	}
 
-    &-main__title {
-        margin-top: 0;
-        padding-top: 0.67em;
-    }
+	&-main__title {
+		margin-top: 0;
+		padding-top: 0.67em;
+	}
 
 	&__desc {
-        flex: 0 0 100%;
+		flex: 0 0 100%;
 		font-size: 0.9rem;
 		font-weight: normal;
 		line-height: 1.5;
-        text-align: justify;
+		text-align: justify;
 	}
 
 	&__scroller {
@@ -272,9 +277,9 @@
 		}
 	}
 
-    &--expanded {
-        &::before {
-            content: "Show Less";
-        }
-    }
+	&--expanded {
+		&::before {
+			content: "Show Less";
+		}
+	}
 }
