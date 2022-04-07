@@ -270,6 +270,16 @@
 	}
 }
 
+.group--2 h2 {
+	flex: 0 0 100%;
+}
+
+.text--group2 {
+	@include mixins.mq-xlarge {
+		display: none;
+	}
+}
+
 .scroller {
 	&--collapsed {
 		&::before {

@@ -126,84 +126,115 @@
                     </div>
                 </div>
 
-<div class="example__group">
-    <div class="coding__example" id="example--2a">
-        <div class="coding__head">
-            <h2>SQL Database query & subquery</h2>
+                <div class="example__group group--2">
+                <h2>SQL Database query & subquery</h2>
 
-            <h3 class="coding__lang">Database Structure</h3>
-            <div class="coding__code">
-                <picture>
-                    <source media="(min-width: 992px)" srcset="images/codeExample2_large.png">
-                    <source media="(min-width: 768px)" srcset="images/codeExample2_medium.png">
-                    <img class="portfolio__image" src="images/soccerDatabase_small.png" alt="code snippet">
-                </picture>
-            </div>
+                    <div class="coding__example" id="example--2a">
+                        <div class="coding__head">
+                            <h3 class="coding__lang">Database Structure</h3>
+                            <div class="coding__code">
+                                <picture>
+                                    <source media="(min-width: 992px)" srcset="images/codeExample2_large.png">
+                                    <source media="(min-width: 768px)" srcset="images/codeExample2_medium.png">
+                                    <img class="portfolio__image" src="images/soccerDatabase_small.png"
+                                        alt="code snippet">
+                                </picture>
+                            </div>
+                        </div>
+                        <a href="#example--2a" class="coding__scroller scroller--collapsed" title="Show More">
+                            <div class="icon icon--arrow-down"></div>
+                        </a>
+                    </div>
 
-        </div>
-        <a href="#example--2a" class="coding__scroller scroller--collapsed" title="Show More">
-            <div class="icon icon--arrow-down"></div>
-        </a>
+                    <div class="coding__example" id="example--2b">
+                        <div class="coding__head">
+                            <h3 class="coding__lang">SQL Query</h3>
+                            <div class="coding__code">
+                                <picture>
+                                    <source media="(min-width: 992px)" srcset="images/codeExample2_large.png">
+                                    <source media="(min-width: 768px)" srcset="images/codeExample2_medium.png">
+                                    <img class="portfolio__image" src="images/codeExample2_small.png"
+                                        alt="code snippet">
+                                </picture>
+                            </div>
+                        </div>
+                        <a href="#example--2b" class="coding__scroller scroller--collapsed" title="Show More">
+                            <div class="icon icon--arrow-down"></div>
+                        </a>
+                    </div>
 
-    </div>
-    <div class="coding__example" id="example--2b">
-        <div class="coding__head">
+                    <div class="coding__example" id="example--2c">
+                        <div class="coding__head">
+                            <h3 class="coding__lang">SQL Output</h3>
+                            <div class="coding__code">
+                                <picture>
+                                    <img class="portfolio__image" src="images/sqlOutput.png" alt="code snippet">
+                                </picture>
+                            </div>
+                        </div>
+                        <a href="#example--2c" class="coding__scroller scroller--collapsed" title="Show More">
+                            <div class="icon icon--arrow-down"></div>
+                        </a>
+                        <div class="coding__text text--group2">
+                            <h3 class="coding__lang">Language: SQL</h3>
+                            <p class="coding__desc">This example demonstrates my ability to query a SQL
+                                database, using joins and subqueries, to produce the output shown above.
+                            </p>
+                            <p class="coding__desc">The query is designed to show a list of goalscorers in the Euro 2016
+                                football championship along with their age, the club they played for at the time, and
+                                the
+                                number
+                                of goals scored. This is sorted by the age of the player in ascending order, and
+                                filtered
+                                using a
+                                subquery to show only clubs that were in the English Premier League in the 2015/16
+                                season.
+                            </p>
+                            <p class="coding__desc">The query gets data from three tables: player_mast, goal_details and
+                                premier_league, with the
+                                latter being a table that I created to allow the filter of EPL clubs only. An initial
+                                subquery (aliased as gs)
+                                produces a count of goals scored grouped by player_id. This squbquery is then joined to
+                                the
+                                player_mast table using the
+                                player_id as a foreign key. Finally, a further subquery on the premier_league table is
+                                used
+                                to filter the results.
+                            </p>
+                        </div>
+                    </div>
 
-            <h3 class="coding__lang">SQL Query</h3>
-            <div class="coding__code">
-                <picture>
-                    <source media="(min-width: 992px)" srcset="images/codeExample2_large.png">
-                    <source media="(min-width: 768px)" srcset="images/codeExample2_medium.png">
-                    <img class="portfolio__image" src="images/codeExample2_small.png" alt="code snippet">
-                </picture>
-            </div>
+                    <div class="coding__example" id="example--2d">
+                        <div class="coding__text">
+                            <h3 class="coding__lang">Language: SQL</h3>
+                            <p class="coding__desc">This example demonstrates my ability to query a SQL
+                                database, using joins and subqueries, to produce the output shown above.
+                            </p>
+                            <p class="coding__desc">The query is designed to show a list of goalscorers in the Euro 2016
+                                football championship along with their age, the club they played for at the time, and
+                                the
+                                number
+                                of goals scored. This is sorted by the age of the player in ascending order, and
+                                filtered
+                                using a
+                                subquery to show only clubs that were in the English Premier League in the 2015/16
+                                season.
+                            </p>
+                            <p class="coding__desc">The query gets data from three tables: player_mast, goal_details and
+                                premier_league, with the
+                                latter being a table that I created to allow the filter of EPL clubs only. An initial
+                                subquery (aliased as gs)
+                                produces a count of goals scored grouped by player_id. This squbquery is then joined to
+                                the
+                                player_mast table using the
+                                player_id as a foreign key. Finally, a further subquery on the premier_league table is
+                                used
+                                to filter the results.
+                            </p>
+                        </div>
+                    </div>
 
-        </div>
-        <a href="#example--2b" class="coding__scroller scroller--collapsed" title="Show More">
-            <div class="icon icon--arrow-down"></div>
-        </a>
-    </div>
-    <div class="coding__example" id="example--2c">
-        <div class="coding__head">
-
-            <h3 class="coding__lang">SQL Output</h3>
-            <div class="coding__code">
-                <picture>
-                    <img class="portfolio__image" src="images/sqlOutput.png" alt="code snippet">
-                </picture>
-            </div>
-
-        </div>
-        <a href="#example--2c" class="coding__scroller scroller--collapsed" title="Show More">
-            <div class="icon icon--arrow-down"></div>
-        </a>
-        <div class="coding__text">
-            <h3 class="coding__lang">Language: SQL</h3>
-            <p class="coding__desc">This example demonstrates my ability to query a SQL
-                database, using joins and subqueries, to produce the output shown above.
-            </p>
-            <p class="coding__desc">The query is designed to show a list of goalscorers in the Euro 2016
-                football championship along with their age, the club they played for at the time, and the
-                number
-                of goals scored. This is sorted by the age of the player in ascending order, and filtered
-                using a
-                subquery to show only clubs that were in the English Premier League in the 2015/16 season.
-            </p>
-            <p class="coding__desc">The query gets data from three tables: player_mast, goal_details and
-                premier_league, with the
-                latter being a table that I created to allow the filter of EPL clubs only. An initial
-                subquery (aliased as gs)
-                produces a count of goals scored grouped by player_id. This squbquery is then joined to the
-                player_mast table using the
-                player_id as a foreign key. Finally, a further subquery on the premier_league table is used
-                to filter the results.
-            </p>
-        </div>
-    </div>
-</div>
-                
-
-
+                </div>
             </div>
         </div>
     </section>
