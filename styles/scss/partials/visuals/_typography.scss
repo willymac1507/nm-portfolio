@@ -227,6 +227,7 @@
 
 .skills {
 	&__list-item {
+		font-size: 0.875rem;
 		@include mixins.mq-xxlarge() {
 			font-size: calc(100vw * 0.01);
 		}

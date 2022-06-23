@@ -9,7 +9,7 @@ $(document).ready(function () {
 	// Start form validation listener
 	if ($("#contactForm").length) {
 		validate();
-		$("#fname, #lname, #email, #subject, #message").keyup(validate);
+		$("#name, #email, #subject, #message").keyup(validate);
 	}
 
 	// Hide success message - to be revealed on form submission
@@ -94,12 +94,12 @@ function toggleScroller() {
 
 // Form validation function
 function validate() {
+	const name = $("#name").val();
 	const email = $("#email").val();
 	const pattern = new RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i);
 	if (
-		$("#fname").val().length > 0 &&
-		$("#lname").val().length > 0 &&
-		$("#email").val().length > 0
+		name.length > 0 &&
+		email.length > 0
 	) {
 		if (pattern.test(email)) {
 			$(".contact__required").text("").removeAttr("style");

@@ -458,7 +458,7 @@ template {
 }
 
 html {
-  font: 400 16px "Baloo Bhaijaan 2", sans-serif;
+  font: 400 16px "Dosis", sans-serif;
   color: #494c5f;
   letter-spacing: 0.4px;
 }
@@ -697,6 +697,9 @@ a {
   }
 }
 
+.skills__list-item {
+  font-size: 0.875rem;
+}
 @media screen and (min-width: 1500px) {
   .skills__list-item {
     font-size: calc(100vw * 0.01);
@@ -1161,7 +1164,7 @@ footer,
     flex: 1 1 45%;
   }
 }
-.contact__input:nth-child(6) {
+.contact__input:nth-child(5) {
   height: 10rem;
 }
 
@@ -1302,7 +1305,7 @@ footer,
 .progress__container {
   width: 100%;
   height: 6px;
-  margin: 3px 0;
+  margin: 6px 0 3px;
   border: 1px solid #494c5f;
 }
 .progress__bar {
@@ -1657,6 +1660,7 @@ footer,
 
 .input--message {
   padding-top: 10px;
+  resize: none;
 }
 
 /* ================================================================== */
