@@ -32,17 +32,17 @@
           </li>
           <li class="skills__list-item">JavaScript
             <div class="progress__container">
-              <div class="progress__bar bar--50"></div>
+              <div class="progress__bar"></div>
             </div>
           </li>
-          <li class="skills__list-item">Accessibility
-            <div class="progress__container">
-              <div class="progress__bar bar--50"></div>
-            </div>
-          </li>
-          <li class="skills__list-item">Responsiveness
+          <li class="skills__list-item">MySql
             <div class="progress__container">
               <div class="progress__bar"></div>
+            </div>
+          </li>
+          <li class="skills__list-item">PHP
+            <div class="progress__container">
+              <div class="progress__bar bar--50"></div>
             </div>
           </li>
         </ul>

@@ -7,9 +7,7 @@
   <title>Will McCloy - Scion Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/css/fonts.css">
   <link rel="stylesheet" href="styles/css/style.css">
 </head>
@@ -28,22 +26,22 @@
             </a>
           </li>
           <li class="navbar__item">
-            <a href="#portfolio" class="navbar__link">
+            <a href="index.php#portfolio" class="navbar__link">
               My Portfolio
             </a>
           </li>
           <li class="navbar__item">
-            <a href="coding.html" class="navbar__link animsition-link">
+            <a href="coding.php" class="navbar__link animsition-link">
               Coding Examples
             </a>
           </li>
           <li class="navbar__item">
-            <a href="scs.html" class="navbar__link animsition-link">
+            <a href="scsScheme.php" class="navbar__link animsition-link">
               SCS Scheme
             </a>
           </li>
           <li class="navbar__item item--emphasis">
-            <a href="#contact" class="navbar__link link--emphasis">
+            <a href="index.php#contact" class="navbar__link link--emphasis">
               Contact Me
             </a>
           </li>

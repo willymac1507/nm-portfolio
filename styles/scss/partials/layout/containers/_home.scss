@@ -207,11 +207,13 @@
         }
     }
 
-    &__input:nth-child(5) {
-        height: 10rem;
-    }
+    //&__input:nth-of-type(4) {
+    //    height: 10rem;
+    //}
+}
 
-
+div.contact__input:nth-last-of-type(2) {
+    height: 10rem;
 }
 
 .footer {

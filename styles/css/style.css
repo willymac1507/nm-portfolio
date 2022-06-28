@@ -458,7 +458,7 @@ template {
 }
 
 html {
-  font: 400 16px "Dosis", sans-serif;
+  font: 300 16px "Mukta Vaani", sans serif;
   color: #494c5f;
   letter-spacing: 0.4px;
 }
@@ -614,13 +614,22 @@ a {
   transition: 0.25s;
 }
 
-.success {
+.success,
+.failure {
   width: 100%;
-  background-color: green;
-  color: #fff;
   border-radius: 5px;
   padding: 5px;
   font-size: 0.875rem;
+}
+
+.success {
+  background-color: green;
+  color: #fff;
+}
+
+.failure {
+  background-color: red;
+  color: #fff;
 }
 
 .footer {
@@ -1164,7 +1173,8 @@ footer,
     flex: 1 1 45%;
   }
 }
-.contact__input:nth-child(5) {
+
+div.contact__input:nth-last-of-type(2) {
   height: 10rem;
 }
 
@@ -1309,13 +1319,13 @@ footer,
   border: 1px solid #494c5f;
 }
 .progress__bar {
-  width: 75%;
+  width: 85%;
   height: 100%;
   background-color: green;
 }
 
 .bar--50 {
-  width: 50%;
+  width: 65%;
   background-color: orange;
 }
 

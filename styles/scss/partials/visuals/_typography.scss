@@ -136,13 +136,22 @@
 	}
 }
 
-.success {
+.success,
+.failure {
 	width: 100%;
-	background-color: green;
-	color: #fff;
 	border-radius: 5px;
 	padding: 5px;
 	font-size: 0.875rem;
+}
+
+.success {
+	background-color: green;
+	color: #fff;
+}
+
+.failure {
+	background-color: red;
+	color: #fff;
 }
 
 .footer {
