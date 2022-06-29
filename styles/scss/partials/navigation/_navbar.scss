@@ -1,5 +1,5 @@
 @use '../utilities/variables' as *;
-@use '../utilities/mixins';
+@use '../utilities/mixins' as *;
 
 /* ================================================================== */
 /* === navbar                                                     === */
@@ -13,11 +13,12 @@
     left: 0;
     width: $nav-width-medium;
     height: 100vh;
+    overflow-y: auto;
     background-color: #fff;
     z-index: 10;
     border-right: 2px solid $color-logo;
 
-    @include mixins.mq-medium() {
+    @include mq-medium() {
         display: block;
     }
 
