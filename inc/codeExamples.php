@@ -3,6 +3,12 @@
 ?>
 
 <section id="coding">
+  <div class="coding-modal__container">
+    <div class="coding--overlay"></div>
+    <div class="coding-modal__content">
+      <img class = "coding-modal__image" src="images/codeExample3_large.png" alt="enlarged code snippet">
+    </div>
+  </div>
   <div class="coding-main__container">
     <div class="coding-main__content">
       <div class="hamburger">
@@ -16,7 +22,7 @@
         <div class="coding__head">
           <h2>Slide down navbar</h2>
           <div class="coding__code">
-            <picture>
+            <picture class="coding__picture">
               <source media="(min-width: 992px)" srcset="images/codeExample1_large.png">
               <source media="(min-width: 768px)" srcset="images/codeExample1_medium.png">
               <img class="portfolio__image" src="images/codeExample1_small.png" alt="code snippet">
@@ -176,7 +182,7 @@
           <h3 class="coding__lang">Language: PHP</h3>
           <p class="coding__desc">
             The code allows for the form to be submitted for server-side validation. The input is first sanitised
-            and then sent to the validation function. Howeverm this code stores the form data in session variables.
+            and then sent to the validation function. However, this code stores the form data in session variables.
             This means that should the form fail validation, when the user is redirected back to the form, they will not
              have to refill the data that they have already entered in order to resubmit.
           </p>

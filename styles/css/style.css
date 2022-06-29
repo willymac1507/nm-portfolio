@@ -470,7 +470,8 @@ a {
 /* ================================================================== */
 /* === Images                                                     === */
 /* ================================================================== */
-.page--overlay {
+.page--overlay,
+.coding--overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -492,12 +493,24 @@ a {
   width: 100%;
   border-radius: 5px;
   display: block;
+  pointer-events: none;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__image {
+    pointer-events: all;
+  }
+  .portfolio__image:hover {
+    cursor: pointer;
+  }
 }
 
 .about__headshot {
   width: 100%;
 }
 
+.coding-modal__image {
+  width: 100%;
+}
 .coding__img {
   width: 100%;
   transform: scale(1.5);
@@ -1359,6 +1372,23 @@ div.contact__input:nth-last-of-type(2) {
   }
 }
 
+.coding-modal__container {
+  position: absolute;
+  top: 0;
+  left: 164px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 164px);
+  height: 100vh;
+}
+.coding-modal__content {
+  display: none;
+  width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  z-index: 10;
+}
 .coding-main__container {
   width: 100%;
 }
@@ -1683,6 +1713,7 @@ div.contact__input:nth-last-of-type(2) {
   left: 0;
   width: 164px;
   height: 100vh;
+  overflow-y: auto;
   background-color: #fff;
   z-index: 10;
   border-right: 2px solid #52b2cb;

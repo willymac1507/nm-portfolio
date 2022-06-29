@@ -45,6 +45,27 @@
 }
 
 .coding {
+	&-modal {
+		&__container {
+			position: absolute;
+			top: 0;
+			left: 164px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: calc(100% - 164px);
+			height: 100vh;
+		}
+
+		&__content {
+			display: none;
+			width: 90%;
+			max-height: 90%;
+			overflow-y: auto;
+			z-index: 10;
+		}
+	}
+
 	&-main {
 		&__container {
 			@include mixins.section-container();

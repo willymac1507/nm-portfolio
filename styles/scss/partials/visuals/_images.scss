@@ -1,10 +1,11 @@
-@use '../utilities/mixins';
+@use '../utilities/mixins' as *;
 
 /* ================================================================== */
 /* === Images                                                     === */
 /* ================================================================== */
 
-.page--overlay {
+.page--overlay,
+.coding--overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,6 +28,14 @@
         width: 100%;
         border-radius: 5px;
         display: block;
+        pointer-events: none;
+
+        @include mq-xlarge() {
+            pointer-events: all;
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -37,6 +46,10 @@
 }
 
 .coding {
+    &-modal__image {
+        width: 100%;
+    }
+
     &__img {
         width: 100%;
         transform: scale(1.5);

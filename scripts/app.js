@@ -38,6 +38,15 @@ $(document).ready(function () {
         }
     });
 
+    // Add click listener to code examples
+    $('.portfolio__image').click( (e) => {
+        showModal(e);
+    })
+
+    $('.coding-modal__container').click( () => {
+            hideModal();
+    })
+
     // Add click listener and functionality to coding scroller
     const scroller = $(".coding__example");
     scroller.click(function (event) {
@@ -57,6 +66,14 @@ $(document).ready(function () {
             icon.toggleClass("icon--arrow-down icon--arrow-up");
         }
     });
+
+    $(window).resize(() => {
+        let $window = $(window);
+        if ($window.width() >= 768) {
+            location.reload();
+        }
+    });
+
 
     // Hide main headline and sub headline until animation complete
     $(".hero__headline").hide({
@@ -80,6 +97,27 @@ $(document).ready(function () {
         });
 });
 
+function showModal(target) {
+    let sibling = target.target.parentNode.firstElementChild;
+    let isSiblingSource = (sibling.nodeName === 'SOURCE');
+    let imageSrc = target.target.src;
+    if (isSiblingSource) {
+        imageSrc = sibling.srcset;
+    }
+    let pageTop = $(window).scrollTop();
+    $('.coding--overlay').toggleClass("overlay--dark");
+    $('.coding-modal__container').css('top', pageTop + 'px');
+    $('.coding-modal__image').attr('src', imageSrc)
+    $('.coding-modal__content').fadeIn();
+    $('body').css('overflow', 'hidden')
+}
+
+function hideModal() {
+    $('.coding--overlay').toggleClass("overlay--dark");
+    $('.coding-modal__content').fadeOut();
+    $('body').removeAttr('style');
+}
+
 function getUrlParameter(sParam) {
     let sPageURL = window.location.search.substring(1),
         sURLVariables = sPageURL.split('&'),
@@ -94,6 +132,12 @@ function getUrlParameter(sParam) {
         }
     }
     return false;
+}
+
+// Open code examples in larger modal window at xlarge sizes
+function modalCoding(e) {
+    console.log(e.id);
+    alert('image clicked');
 }
 
 // Scroller visibility toggle function
@@ -139,17 +183,17 @@ function validate() {
 
 // Navbar and hamburger toggle function
 function toggleNav() {
-    $(".navbar").slideToggle(500, function () {
-        if ($(".navbar").attr("style") === "display: none;") {
-            $(".navbar").removeAttr("style");
+    let sideNav = $(".navbar");
+    sideNav.slideToggle(500, function () {
+        if (sideNav.attr("style") === "display: none;") {
+            sideNav.removeAttr("style");
             $(".main__container").removeClass('body--hide');
-        } else if ($(".navbar").attr("style") === "display: block;") {
+        } else if (sideNav.attr("style") === "display: block;") {
             // Add click listener to page overlay to allow click anywhere to close
             $(".main__container").addClass('body--hide');
             $(".page--overlay").click(function (e) {
                 e.stopImmediatePropagation();
                 toggleNav();
-                return;
             });
         }
     });
